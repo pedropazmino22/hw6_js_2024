@@ -17,11 +17,11 @@ window.addEventListener("load", function () {
 document.querySelector("#play").addEventListener("click", function () {
 	console.log("Play Video");
 	video.play();
-	video.volume = 0.6;     // Volume was too loud I set this as a default
-	volumeSlider.value = 60;
-	volumeDisplay.textContent = "60%";
+	video.volume = 0.1;     // Volume was too loud I set this as a default
+	volumeSlider.value = 100;
+	volumeDisplay.textContent = "100%";
 	if (video.paused) {
-        	volumeDisplay.textContent = "60%";
+        volumeDisplay.textContent = "100%";
     }
 });
 
