@@ -53,25 +53,15 @@ document.querySelector("#skip").addEventListener("click", function () {
 	console.log("Video Time: " + video.currentTime);
 });
 
+// Mute/unmute the video and update the text in the button.
 document.querySelector("#mute").addEventListener("click", function () {
-	if (video.muted) {
-		video.muted = false;
-		document.querySelector("#mute").textContent = "Mute";
-		volumeSlider.value = video.volume * 100;
-		volumeDisplay.textContent = Math.round(video.volume * 100) + '%';
-		console.log("Unmuted Video");
-	}
-	else {
-		video.muted = true;
-		document.querySelector("#mute").textContent = "Unmute";
-		if (volumeSlider.value !== '0') {
-			volumeSlider.value = video.volume * 100;
-			volumeDisplay.textContent = Math.round(video.volume * 100) + '%';
-			console.log("Muted Video");
-		}
-		// I added a logic so that the muting function does not go back to 0 every time
-	}
-
+    if (video.muted) {
+        video.muted = false;
+        document.querySelector("#mute").textContent = "Mute";
+    } else {
+        video.muted = true;
+        document.querySelector("#mute").textContent = "Unmute";
+    }
 });
 
 // Volume Slider Control and Display
