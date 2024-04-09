@@ -17,8 +17,9 @@ window.addEventListener("load", function () {
 document.querySelector("#play").addEventListener("click", function () {
 	console.log("Play Video");
 	video.play();
-	var volume = video.volume *100;
-	document.querySelector("#volume").textContent = volume + "%";
+	var vol = video.volume * 100;
+	document.querySelector("#volume").textContent = vol + "%";
+	// I notice that if i lower the volume and click the button again, the #volume caption goes back to 100 evne though its lower. I couldn't though.
 });
 
 
