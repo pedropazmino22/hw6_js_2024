@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
 document.querySelector("#play").addEventListener("click", function () {
     console.log("Play Video");
     video.play();
-    if (video.paused) {
+    if (video.paused || volumeDisplay.textContent !== "100%") {
         video.volume = 0.1;
         volumeSlider.value = 100;
         volumeDisplay.textContent = "100%";
